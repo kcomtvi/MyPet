@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+/*MENU*/
+#header{
+    position: relative;
+    width: 100%;
+}
+.btn-menu > .fa-bars{
+    display: none;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.menu .logo-box{
+    margin-left: 20px;
+}
+.imglogo{
+    width: 164px;
+    height: 65px;
+}
+.menu .list-container{
+    margin-right: 20px;
+}
+.menu .list-container ul{
+    display: flex;
+}
+.menu .list-container ul li{
+    list-style: none;
+}
+.menu .list-container ul li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: darkblue;
+    border-radius: 24px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+    /*menu desplegable*/
+.menu .list-container a{
+    display: block;
+    text-decoration: none;
+}
+.menu .list-container ul ul{
+    display: none;
+}
+.menu .list-container ul li:hover ul{
+    display: block;
+    position: absolute;
+    background: white;
+    border-radius: 15px;
+}
+.lists .mover i{
+    margin-left: 10px;
+}
+.lists .mover:hover i{
+    color: white;
+}
+    /*fin de menu desplegable*/
+.menu .list-container ul li a.activo{
+    background: orange;
+    color: white;
+}
+.menu .list-container ul li a:hover{
+    background: orange;
+    color: white;
+}
+.lists a:hover i{
+    color: blue;
+}
+
+
+/*BANNER*/
+.banner{ 
+    width: 100%;
+    height: 450px;
+    animation: banner 1s infinite linear alternate;
+    background-size: 100%  100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes banner{
+    0%, 100%{
+        background-image: url(../imagenes/bannerinter.jpg);
+    }
+}
+.htres{
+    font-size: 80px;
+    text-align: center;
+    color: white;
+}   
+
+/*TITULO*/
+.huno{
+    font-size: 40px;
+    text-align: center;
+    color: #FF6600;
+}
+.hdos{
+    font-size: 40px;
+    text-align: center;
+    color: #FF6600;
+}
+
+
+/*PARRAFO*/
+.parrafo{
+    height: 400px;
+    margin: 2rem auto;
+    position: relative;
+    text-align: center;
+    width: 800px;
+}
+.parrafo p{
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0 6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: middle;
+    color: darkblue;
+}
+
+
+/*CAROUSEL*/
+.Carousel{
+    width: 100%;
+    margin: 0px 0px;
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    align-items: center;
+}
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slick{
+    position: relative;
+    width: 380px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.slick a .imgp{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    transition: .3s ease-in-out;
+}
+.slick a .imgp:hover{
+    opacity: .90;
+}
+    /*botones carousel*/
+.slick-arrow{
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0,0,0,.7);
+}
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
+    /*fin de botones carousel*/
+
+
+/*FOOTER*/
+.footer{
+    background: #111;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+    border-top: 3px solid rgb(0, 0, 0);
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin:  10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a li{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: orange;
+}
+.footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
